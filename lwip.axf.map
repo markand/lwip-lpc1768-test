@@ -1,0 +1,825 @@
+Component: Arm Compiler for Embedded 6.21 Tool: armlink [5ec1fa00]
+
+==============================================================================
+
+Memory Map of the image
+
+  Image Entry point : 0x00000295
+
+  Load Region LR_ROM0 (Base: 0x00000000, Size: 0x0000e4b8, Max: 0x00080000, ABSOLUTE)
+
+    Execution Region ER_ROM0 (Base: 0x00000000, Size: 0x0000e400, Max: 0x00080000, ABSOLUTE)
+
+    Base Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x00000000   0x000000cc   Data   RO           12    RESET               startup_LPC17xx.o
+    0x000000cc   0x00000008   Code   RO         2284  * !!!main             c_wu.l(__main.o)
+    0x000000d4   0x0000005c   Code   RO         2827    !!!scatter          c_wu.l(__scatter.o)
+    0x00000130   0x0000001a   Code   RO         2831    !!handler_copy      c_wu.l(__scatter_copy.o)
+    0x0000014a   0x00000002   PAD
+    0x0000014c   0x00000002   Code   RO         2828    !!handler_null      c_wu.l(__scatter.o)
+    0x0000014e   0x00000002   PAD
+    0x00000150   0x0000001c   Code   RO         2833    !!handler_zi        c_wu.l(__scatter_zi.o)
+    0x0000016c   0x00000000   Code   RO         2388    .ARM.Collect$$_printf_percent$$00000000  c_wu.l(_printf_percent.o)
+    0x0000016c   0x00000006   Code   RO         2377    .ARM.Collect$$_printf_percent$$00000001  c_wu.l(_printf_n.o)
+    0x00000172   0x00000006   Code   RO         2379    .ARM.Collect$$_printf_percent$$00000002  c_wu.l(_printf_p.o)
+    0x00000178   0x00000006   Code   RO         2384    .ARM.Collect$$_printf_percent$$00000003  c_wu.l(_printf_f.o)
+    0x0000017e   0x00000006   Code   RO         2385    .ARM.Collect$$_printf_percent$$00000004  c_wu.l(_printf_e.o)
+    0x00000184   0x00000006   Code   RO         2386    .ARM.Collect$$_printf_percent$$00000005  c_wu.l(_printf_g.o)
+    0x0000018a   0x00000006   Code   RO         2387    .ARM.Collect$$_printf_percent$$00000006  c_wu.l(_printf_a.o)
+    0x00000190   0x0000000a   Code   RO         2392    .ARM.Collect$$_printf_percent$$00000007  c_wu.l(_printf_ll.o)
+    0x0000019a   0x00000006   Code   RO         2381    .ARM.Collect$$_printf_percent$$00000008  c_wu.l(_printf_i.o)
+    0x000001a0   0x00000006   Code   RO         2382    .ARM.Collect$$_printf_percent$$00000009  c_wu.l(_printf_d.o)
+    0x000001a6   0x00000006   Code   RO         2383    .ARM.Collect$$_printf_percent$$0000000A  c_wu.l(_printf_u.o)
+    0x000001ac   0x00000006   Code   RO         2380    .ARM.Collect$$_printf_percent$$0000000B  c_wu.l(_printf_o.o)
+    0x000001b2   0x00000006   Code   RO         2378    .ARM.Collect$$_printf_percent$$0000000C  c_wu.l(_printf_x.o)
+    0x000001b8   0x00000006   Code   RO         2389    .ARM.Collect$$_printf_percent$$0000000D  c_wu.l(_printf_lli.o)
+    0x000001be   0x00000006   Code   RO         2390    .ARM.Collect$$_printf_percent$$0000000E  c_wu.l(_printf_lld.o)
+    0x000001c4   0x00000006   Code   RO         2391    .ARM.Collect$$_printf_percent$$0000000F  c_wu.l(_printf_llu.o)
+    0x000001ca   0x00000006   Code   RO         2396    .ARM.Collect$$_printf_percent$$00000010  c_wu.l(_printf_llo.o)
+    0x000001d0   0x00000006   Code   RO         2397    .ARM.Collect$$_printf_percent$$00000011  c_wu.l(_printf_llx.o)
+    0x000001d6   0x0000000a   Code   RO         2393    .ARM.Collect$$_printf_percent$$00000012  c_wu.l(_printf_l.o)
+    0x000001e0   0x00000006   Code   RO         2375    .ARM.Collect$$_printf_percent$$00000013  c_wu.l(_printf_c.o)
+    0x000001e6   0x00000006   Code   RO         2376    .ARM.Collect$$_printf_percent$$00000014  c_wu.l(_printf_s.o)
+    0x000001ec   0x00000006   Code   RO         2394    .ARM.Collect$$_printf_percent$$00000015  c_wu.l(_printf_lc.o)
+    0x000001f2   0x00000006   Code   RO         2395    .ARM.Collect$$_printf_percent$$00000016  c_wu.l(_printf_ls.o)
+    0x000001f8   0x00000004   Code   RO         2528    .ARM.Collect$$_printf_percent$$00000017  c_wu.l(_printf_percent_end.o)
+    0x000001fc   0x00000002   Code   RO         2689    .ARM.Collect$$libinit$$00000000  c_wu.l(libinit.o)
+    0x000001fe   0x00000000   Code   RO         2423    .ARM.Collect$$libinit$$00000002  c_wu.l(libinit2.o)
+    0x000001fe   0x00000000   Code   RO         2425    .ARM.Collect$$libinit$$00000004  c_wu.l(libinit2.o)
+    0x000001fe   0x00000000   Code   RO         2427    .ARM.Collect$$libinit$$00000006  c_wu.l(libinit2.o)
+    0x000001fe   0x00000008   Code   RO         2428    .ARM.Collect$$libinit$$00000007  c_wu.l(libinit2.o)
+    0x00000206   0x00000000   Code   RO         2430    .ARM.Collect$$libinit$$0000000C  c_wu.l(libinit2.o)
+    0x00000206   0x00000000   Code   RO         2432    .ARM.Collect$$libinit$$0000000E  c_wu.l(libinit2.o)
+    0x00000206   0x00000004   Code   RO         2433    .ARM.Collect$$libinit$$0000000F  c_wu.l(libinit2.o)
+    0x0000020a   0x00000000   Code   RO         2434    .ARM.Collect$$libinit$$00000010  c_wu.l(libinit2.o)
+    0x0000020a   0x00000006   Code   RO         2435    .ARM.Collect$$libinit$$00000011  c_wu.l(libinit2.o)
+    0x00000210   0x00000000   Code   RO         2437    .ARM.Collect$$libinit$$00000013  c_wu.l(libinit2.o)
+    0x00000210   0x0000000c   Code   RO         2438    .ARM.Collect$$libinit$$00000014  c_wu.l(libinit2.o)
+    0x0000021c   0x00000000   Code   RO         2439    .ARM.Collect$$libinit$$00000015  c_wu.l(libinit2.o)
+    0x0000021c   0x00000000   Code   RO         2441    .ARM.Collect$$libinit$$00000017  c_wu.l(libinit2.o)
+    0x0000021c   0x0000000a   Code   RO         2442    .ARM.Collect$$libinit$$00000018  c_wu.l(libinit2.o)
+    0x00000226   0x00000000   Code   RO         2443    .ARM.Collect$$libinit$$00000019  c_wu.l(libinit2.o)
+    0x00000226   0x00000000   Code   RO         2445    .ARM.Collect$$libinit$$0000001B  c_wu.l(libinit2.o)
+    0x00000226   0x00000000   Code   RO         2447    .ARM.Collect$$libinit$$0000001D  c_wu.l(libinit2.o)
+    0x00000226   0x00000000   Code   RO         2449    .ARM.Collect$$libinit$$0000001F  c_wu.l(libinit2.o)
+    0x00000226   0x00000000   Code   RO         2451    .ARM.Collect$$libinit$$00000021  c_wu.l(libinit2.o)
+    0x00000226   0x00000000   Code   RO         2453    .ARM.Collect$$libinit$$00000023  c_wu.l(libinit2.o)
+    0x00000226   0x00000000   Code   RO         2455    .ARM.Collect$$libinit$$00000025  c_wu.l(libinit2.o)
+    0x00000226   0x00000004   Code   RO         2456    .ARM.Collect$$libinit$$00000026  c_wu.l(libinit2.o)
+    0x0000022a   0x00000000   Code   RO         2457    .ARM.Collect$$libinit$$00000027  c_wu.l(libinit2.o)
+    0x0000022a   0x00000000   Code   RO         2461    .ARM.Collect$$libinit$$0000002E  c_wu.l(libinit2.o)
+    0x0000022a   0x00000000   Code   RO         2463    .ARM.Collect$$libinit$$00000030  c_wu.l(libinit2.o)
+    0x0000022a   0x00000000   Code   RO         2465    .ARM.Collect$$libinit$$00000032  c_wu.l(libinit2.o)
+    0x0000022a   0x00000000   Code   RO         2467    .ARM.Collect$$libinit$$00000034  c_wu.l(libinit2.o)
+    0x0000022a   0x00000002   Code   RO         2468    .ARM.Collect$$libinit$$00000035  c_wu.l(libinit2.o)
+    0x0000022c   0x00000002   Code   RO         2820    .ARM.Collect$$libshutdown$$00000000  c_wu.l(libshutdown.o)
+    0x0000022e   0x00000000   Code   RO         2691    .ARM.Collect$$libshutdown$$00000002  c_wu.l(libshutdown2.o)
+    0x0000022e   0x00000004   Code   RO         2692    .ARM.Collect$$libshutdown$$00000003  c_wu.l(libshutdown2.o)
+    0x00000232   0x00000000   Code   RO         2693    .ARM.Collect$$libshutdown$$00000004  c_wu.l(libshutdown2.o)
+    0x00000232   0x00000000   Code   RO         2696    .ARM.Collect$$libshutdown$$00000007  c_wu.l(libshutdown2.o)
+    0x00000232   0x00000000   Code   RO         2699    .ARM.Collect$$libshutdown$$0000000A  c_wu.l(libshutdown2.o)
+    0x00000232   0x00000000   Code   RO         2701    .ARM.Collect$$libshutdown$$0000000C  c_wu.l(libshutdown2.o)
+    0x00000232   0x00000004   Code   RO         2702    .ARM.Collect$$libshutdown$$0000000D  c_wu.l(libshutdown2.o)
+    0x00000236   0x00000000   Code   RO         2704    .ARM.Collect$$libshutdown$$0000000F  c_wu.l(libshutdown2.o)
+    0x00000236   0x00000002   Code   RO         2705    .ARM.Collect$$libshutdown$$00000010  c_wu.l(libshutdown2.o)
+    0x00000238   0x00000000   Code   RO         2290    .ARM.Collect$$rtentry$$00000000  c_wu.l(__rtentry.o)
+    0x00000238   0x00000000   Code   RO         2488    .ARM.Collect$$rtentry$$00000002  c_wu.l(__rtentry2.o)
+    0x00000238   0x00000004   Code   RO         2502    .ARM.Collect$$rtentry$$00000007  c_wu.l(__rtentry7.o)
+    0x0000023c   0x00000008   Code   RO         2489    .ARM.Collect$$rtentry$$00000008  c_wu.l(__rtentry2.o)
+    0x00000244   0x00000004   Code   RO         2491    .ARM.Collect$$rtentry$$0000000A  c_wu.l(__rtentry2.o)
+    0x00000248   0x00000000   Code   RO         2493    .ARM.Collect$$rtentry$$0000000C  c_wu.l(__rtentry2.o)
+    0x00000248   0x00000008   Code   RO         2494    .ARM.Collect$$rtentry$$0000000D  c_wu.l(__rtentry2.o)
+    0x00000250   0x00000004   Code   RO         2503    .ARM.Collect$$rtentry$$00002718  c_wu.l(__rtentry7.o)
+    0x00000254   0x00000002   Code   RO         2721    .ARM.Collect$$rtexit$$00000000  c_wu.l(rtexit.o)
+    0x00000256   0x00000000   Code   RO         2777    .ARM.Collect$$rtexit$$00000002  c_wu.l(rtexit2.o)
+    0x00000256   0x00000004   Code   RO         2778    .ARM.Collect$$rtexit$$00000003  c_wu.l(rtexit2.o)
+    0x0000025a   0x00000006   Code   RO         2779    .ARM.Collect$$rtexit$$00000004  c_wu.l(rtexit2.o)
+    0x00000260   0x00000034   Code   RO         2261    .emb_text           c_wu.l(rand.o)
+    0x00000294   0x0000003c   Code   RO           14  * .text               startup_LPC17xx.o
+    0x000002d0   0x00000010   Code   RO         2249    .text               c_wu.l(rt_ctype_table.o)
+    0x000002e0   0x00000018   Code   RO         2253    .text               c_wu.l(printf.o)
+    0x000002f8   0x00000004   Code   RO         2307    .text               c_wu.l(rt_errno_addr_twolibspace.o)
+    0x000002fc   0x00000004   Code   RO           13    .ARM.__at_0x02FC    startup_LPC17xx.o
+    0x00000300   0x000000c0   Code   RO            3    .text               irq_armv7m.o
+    0x000003c0   0x00000090   Code   RO         2259    .text               c_wu.l(fflush_locked.o)
+    0x00000450   0x0000003c   Code   RO         2262    .text               c_wu.l(rand.o)
+    0x0000048c   0x00000016   Code   RO         2266    .text               c_wu.l(abort.o)
+    0x000004a2   0x0000003e   Code   RO         2270    .text               c_wu.l(strlen.o)
+    0x000004e0   0x0000008a   Code   RO         2274    .text               c_wu.l(rt_memcpy_v6.o)
+    0x0000056a   0x00000044   Code   RO         2278    .text               c_wu.l(rt_memclr.o)
+    0x000005ae   0x0000004e   Code   RO         2280    .text               c_wu.l(rt_memclr_w.o)
+    0x000005fc   0x00000006   Code   RO         2282    .text               c_wu.l(heapauxi.o)
+    0x00000602   0x00000002   PAD
+    0x00000604   0x0000000c   Code   RO         2286    .text               c_wu.l(sys_exit.o)
+    0x00000610   0x0000000a   Code   RO         2300    .text               c_wu.l(rt_locale_twolibspace.o)
+    0x0000061a   0x0000004e   Code   RO         2311    .text               c_wu.l(_printf_pad.o)
+    0x00000668   0x00000024   Code   RO         2313    .text               c_wu.l(_printf_truncate.o)
+    0x0000068c   0x00000052   Code   RO         2315    .text               c_wu.l(_printf_str.o)
+    0x000006de   0x00000002   PAD
+    0x000006e0   0x00000078   Code   RO         2317    .text               c_wu.l(_printf_dec.o)
+    0x00000758   0x00000028   Code   RO         2319    .text               c_wu.l(_printf_charcount.o)
+    0x00000780   0x000000bc   Code   RO         2323    .text               c_wu.l(_printf_wctomb.o)
+    0x0000083c   0x0000007c   Code   RO         2326    .text               c_wu.l(_printf_longlong_dec.o)
+    0x000008b8   0x00000070   Code   RO         2332    .text               c_wu.l(_printf_oct_int_ll.o)
+    0x00000928   0x00000094   Code   RO         2352    .text               c_wu.l(_printf_hex_int_ll_ptr.o)
+    0x000009bc   0x00000188   Code   RO         2372    .text               c_wu.l(__printf_flags_ss_wp.o)
+    0x00000b44   0x000000f8   Code   RO         2400    .text               c_wu.l(fseek.o)
+    0x00000c3c   0x00000108   Code   RO         2402    .text               c_wu.l(stdio.o)
+    0x00000d44   0x0000000e   Code   RO         2414    .text               c_wu.l(defsig_abrt_outer.o)
+    0x00000d52   0x00000064   Code   RO         2418    .text               c_wu.l(rt_memcpy_w.o)
+    0x00000db6   0x00000066   Code   RO         2477    .text               c_wu.l(sys_io.o)
+    0x00000e1c   0x00000008   Code   RO         2481    .text               c_wu.l(libspace.o)
+    0x00000e24   0x00000002   Code   RO         2484    .text               c_wu.l(use_no_semi.o)
+    0x00000e26   0x00000000   Code   RO         2486    .text               c_wu.l(indicate_semi.o)
+    0x00000e26   0x0000008a   Code   RO         2511    .text               c_wu.l(lludiv10.o)
+    0x00000eb0   0x000000b2   Code   RO         2513    .text               c_wu.l(_printf_intcommon.o)
+    0x00000f62   0x0000041c   Code   RO         2515    .text               c_wu.l(_printf_fp_dec.o)
+    0x0000137e   0x00000002   PAD
+    0x00001380   0x000002fc   Code   RO         2519    .text               c_wu.l(_printf_fp_hex.o)
+    0x0000167c   0x00000030   Code   RO         2522    .text               c_wu.l(_printf_char_common.o)
+    0x000016ac   0x0000002c   Code   RO         2524    .text               c_wu.l(_printf_char.o)
+    0x000016d8   0x0000002c   Code   RO         2526    .text               c_wu.l(_printf_wchar.o)
+    0x00001704   0x00000042   Code   RO         2537    .text               c_wu.l(ftell.o)
+    0x00001746   0x00000002   PAD
+    0x00001748   0x000001c8   Code   RO         2545    .text               c_wu.l(initio_locked.o)
+    0x00001910   0x00000048   Code   RO         2547    .text               c_wu.l(_c32rtomb.o)
+    0x00001958   0x0000000a   Code   RO         2549    .text               c_wu.l(defsig_exit.o)
+    0x00001962   0x00000002   PAD
+    0x00001964   0x00000030   Code   RO         2551    .text               c_wu.l(defsig_abrt_inner.o)
+    0x00001994   0x00000080   Code   RO         2553    .text               c_wu.l(strcmpv7m.o)
+    0x00001a14   0x00000076   Code   RO         2568    .text               c_wu.l(h1_free_threads.o)
+    0x00001a8a   0x00000002   PAD
+    0x00001a8c   0x00000080   Code   RO         2620    .text               c_wu.l(_printf_fp_infnan.o)
+    0x00001b0c   0x000000e4   Code   RO         2626    .text               c_wu.l(bigflt0.o)
+    0x00001bf0   0x000001e2   Code   RO         2653    .text               c_wu.l(flsbuf.o)
+    0x00001dd2   0x0000004c   Code   RO         2659    .text               c_wu.l(fclose.o)
+    0x00001e1e   0x00000068   Code   RO         2661    .text               c_wu.l(setvbuf_locked.o)
+    0x00001e86   0x00000002   PAD
+    0x00001e88   0x0000014c   Code   RO         2663    .text               c_wu.l(fopen_locked.o)
+    0x00001fd4   0x00000012   Code   RO         2668    .text               c_wu.l(exit.o)
+    0x00001fe6   0x00000032   Code   RO         2672    .text               c_wu.l(defsig_general.o)
+    0x00002018   0x0000000e   Code   RO         2678    .text               c_wu.l(defsig_rtred_outer.o)
+    0x00002026   0x0000000e   Code   RO         2713    .text               c_wu.l(sys_wrch.o)
+    0x00002034   0x0000000a   Code   RO         2728    .text               c_wu.l(rt_heap_descriptor_twolibspace.o)
+    0x0000203e   0x00000004   Code   RO         2730    .text               c_wu.l(hguard.o)
+    0x00002042   0x0000008a   Code   RO         2734    .text               c_wu.l(init_alloc.o)
+    0x000020cc   0x000000a6   Code   RO         2742    .text               c_wu.l(h1_alloc_threads.o)
+    0x00002172   0x00000002   PAD
+    0x00002174   0x00000040   Code   RO         2752    .text               c_wu.l(_printf_char_file_locked.o)
+    0x000021b4   0x00000034   Code   RO         2762    .text               c_wu.l(defsig_rtred_inner.o)
+    0x000021e8   0x0000000e   Code   RO         2764    .text               c_wu.l(defsig_rtmem_outer.o)
+    0x000021f6   0x00000000   Code   RO         2784    .text               c_wu.l(maybetermalloc2.o)
+    0x000021f6   0x00000012   Code   RO         2789    .text               c_wu.l(h1_init_threads.o)
+    0x00002208   0x00000052   Code   RO         2791    .text               c_wu.l(h1_extend_threads.o)
+    0x0000225a   0x00000002   PAD
+    0x0000225c   0x00000050   Code   RO         2799    .text               c_wu.l(defsig_rtmem_inner.o)
+    0x000022ac   0x00000010   Code   RO         2816    .text               c_wu.l(term_alloc.o)
+    0x000022bc   0x0000000a   Code   RO         2823    .text               c_wu.l(h1_final_threads.o)
+    0x000022c6   0x00000002   PAD
+    0x000022c8   0x00000080   Code   RO         1297    .text.ENET_IRQHandler  EMAC_LPC17xx.o
+    0x00002348   0x00000008   Code   RO          313    .text.EvrRtxDelayCompleted  rtx_evr.o
+    0x00002350   0x00000008   Code   RO          361    .text.EvrRtxEventFlagsWaitTimeout  rtx_evr.o
+    0x00002358   0x00000008   Code   RO          149    .text.EvrRtxKernelError  rtx_evr.o
+    0x00002360   0x0000000a   Code   RO          197    .text.EvrRtxKernelErrorNotify  rtx_evr.o
+    0x0000236a   0x00000002   PAD
+    0x0000236c   0x00000008   Code   RO          159    .text.EvrRtxKernelGetState  rtx_evr.o
+    0x00002374   0x00000008   Code   RO          189    .text.EvrRtxKernelGetTickCount  rtx_evr.o
+    0x0000237c   0x00000008   Code   RO          191    .text.EvrRtxKernelGetTickFreq  rtx_evr.o
+    0x00002384   0x00000002   Code   RO          151    .text.EvrRtxKernelInitialize  rtx_evr.o
+    0x00002386   0x00000002   PAD
+    0x00002388   0x00000002   Code   RO          153    .text.EvrRtxKernelInitialized  rtx_evr.o
+    0x0000238a   0x00000002   PAD
+    0x0000238c   0x00000002   Code   RO          165    .text.EvrRtxKernelLock  rtx_evr.o
+    0x0000238e   0x00000002   PAD
+    0x00002390   0x00000008   Code   RO          175    .text.EvrRtxKernelLockRestored  rtx_evr.o
+    0x00002398   0x00000008   Code   RO          167    .text.EvrRtxKernelLocked  rtx_evr.o
+    0x000023a0   0x00000008   Code   RO          173    .text.EvrRtxKernelRestoreLock  rtx_evr.o
+    0x000023a8   0x0000000e   Code   RO          139    .text.EvrRtxMemoryAlloc  rtx_evr.o
+    0x000023b6   0x00000002   PAD
+    0x000023b8   0x0000000a   Code   RO          145    .text.EvrRtxMemoryBlockAlloc  rtx_evr.o
+    0x000023c2   0x00000002   PAD
+    0x000023c4   0x0000000c   Code   RO          147    .text.EvrRtxMemoryBlockFree  rtx_evr.o
+    0x000023d0   0x0000000e   Code   RO          143    .text.EvrRtxMemoryBlockInit  rtx_evr.o
+    0x000023de   0x00000002   PAD
+    0x000023e0   0x0000000c   Code   RO          141    .text.EvrRtxMemoryFree  rtx_evr.o
+    0x000023ec   0x0000000c   Code   RO          137    .text.EvrRtxMemoryInit  rtx_evr.o
+    0x000023f8   0x00000008   Code   RO          439    .text.EvrRtxMemoryPoolAllocTimeout  rtx_evr.o
+    0x00002400   0x0000000a   Code   RO          467    .text.EvrRtxMessageQueueCreated  rtx_evr.o
+    0x0000240a   0x00000002   PAD
+    0x0000240c   0x0000000a   Code   RO          463    .text.EvrRtxMessageQueueError  rtx_evr.o
+    0x00002416   0x00000002   PAD
+    0x00002418   0x0000000e   Code   RO          483    .text.EvrRtxMessageQueueGet  rtx_evr.o
+    0x00002426   0x00000002   PAD
+    0x00002428   0x0000000c   Code   RO          485    .text.EvrRtxMessageQueueGetPending  rtx_evr.o
+    0x00002434   0x00000008   Code   RO          487    .text.EvrRtxMessageQueueGetTimeout  rtx_evr.o
+    0x0000243c   0x0000000a   Code   RO          477    .text.EvrRtxMessageQueueInsertPending  rtx_evr.o
+    0x00002446   0x00000002   PAD
+    0x00002448   0x0000000a   Code   RO          479    .text.EvrRtxMessageQueueInserted  rtx_evr.o
+    0x00002452   0x00000002   PAD
+    0x00002454   0x0000000c   Code   RO          465    .text.EvrRtxMessageQueueNew  rtx_evr.o
+    0x00002460   0x0000000a   Code   RO          481    .text.EvrRtxMessageQueueNotInserted  rtx_evr.o
+    0x0000246a   0x00000002   PAD
+    0x0000246c   0x0000000a   Code   RO          491    .text.EvrRtxMessageQueueNotRetrieved  rtx_evr.o
+    0x00002476   0x00000002   PAD
+    0x00002478   0x00000010   Code   RO          471    .text.EvrRtxMessageQueuePut  rtx_evr.o
+    0x00002488   0x0000000c   Code   RO          473    .text.EvrRtxMessageQueuePutPending  rtx_evr.o
+    0x00002494   0x00000008   Code   RO          475    .text.EvrRtxMessageQueuePutTimeout  rtx_evr.o
+    0x0000249c   0x0000000a   Code   RO          489    .text.EvrRtxMessageQueueRetrieved  rtx_evr.o
+    0x000024a6   0x00000002   PAD
+    0x000024a8   0x0000000a   Code   RO          379    .text.EvrRtxMutexAcquire  rtx_evr.o
+    0x000024b2   0x00000002   PAD
+    0x000024b4   0x0000000a   Code   RO          381    .text.EvrRtxMutexAcquirePending  rtx_evr.o
+    0x000024be   0x00000002   PAD
+    0x000024c0   0x00000008   Code   RO          383    .text.EvrRtxMutexAcquireTimeout  rtx_evr.o
+    0x000024c8   0x0000000a   Code   RO          385    .text.EvrRtxMutexAcquired  rtx_evr.o
+    0x000024d2   0x00000002   PAD
+    0x000024d4   0x0000000a   Code   RO          375    .text.EvrRtxMutexCreated  rtx_evr.o
+    0x000024de   0x00000002   PAD
+    0x000024e0   0x00000008   Code   RO          395    .text.EvrRtxMutexDelete  rtx_evr.o
+    0x000024e8   0x00000008   Code   RO          397    .text.EvrRtxMutexDestroyed  rtx_evr.o
+    0x000024f0   0x0000000a   Code   RO          371    .text.EvrRtxMutexError  rtx_evr.o
+    0x000024fa   0x00000002   PAD
+    0x000024fc   0x00000008   Code   RO          373    .text.EvrRtxMutexNew  rtx_evr.o
+    0x00002504   0x00000008   Code   RO          387    .text.EvrRtxMutexNotAcquired  rtx_evr.o
+    0x0000250c   0x00000008   Code   RO          389    .text.EvrRtxMutexRelease  rtx_evr.o
+    0x00002514   0x0000000a   Code   RO          391    .text.EvrRtxMutexReleased  rtx_evr.o
+    0x0000251e   0x00000002   PAD
+    0x00002520   0x00000008   Code   RO          411    .text.EvrRtxSemaphoreAcquireTimeout  rtx_evr.o
+    0x00002528   0x0000000a   Code   RO          247    .text.EvrRtxThreadBlocked  rtx_evr.o
+    0x00002532   0x00000002   PAD
+    0x00002534   0x0000000c   Code   RO          205    .text.EvrRtxThreadCreated  rtx_evr.o
+    0x00002540   0x00000008   Code   RO          259    .text.EvrRtxThreadDestroyed  rtx_evr.o
+    0x00002548   0x0000000a   Code   RO          201    .text.EvrRtxThreadError  rtx_evr.o
+    0x00002552   0x00000002   PAD
+    0x00002554   0x00000002   Code   RO          255    .text.EvrRtxThreadExit  rtx_evr.o
+    0x00002556   0x00000002   PAD
+    0x00002558   0x0000000e   Code   RO          299    .text.EvrRtxThreadFlagsWaitCompleted  rtx_evr.o
+    0x00002566   0x00000002   PAD
+    0x00002568   0x00000008   Code   RO          297    .text.EvrRtxThreadFlagsWaitTimeout  rtx_evr.o
+    0x00002570   0x00000008   Code   RO          213    .text.EvrRtxThreadGetId  rtx_evr.o
+    0x00002578   0x00000008   Code   RO          245    .text.EvrRtxThreadJoined  rtx_evr.o
+    0x00002580   0x0000000c   Code   RO          203    .text.EvrRtxThreadNew  rtx_evr.o
+    0x0000258c   0x00000008   Code   RO          251    .text.EvrRtxThreadPreempted  rtx_evr.o
+    0x00002594   0x00000008   Code   RO          253    .text.EvrRtxThreadSwitched  rtx_evr.o
+    0x0000259c   0x0000000a   Code   RO          249    .text.EvrRtxThreadUnblocked  rtx_evr.o
+    0x000025a6   0x00000002   PAD
+    0x000025a8   0x0000000a   Code   RO          317    .text.EvrRtxTimerCallback  rtx_evr.o
+    0x000025b2   0x00000002   PAD
+    0x000025b4   0x00000014   Code   RO          522    .text.IsException   rtx_kernel.o
+    0x000025c8   0x00000014   Code   RO          763    .text.IsException   rtx_msgqueue.o
+    0x000025dc   0x00000014   Code   RO          844    .text.IsException   rtx_mutex.o
+    0x000025f0   0x00000014   Code   RO         1047    .text.IsException   rtx_thread.o
+    0x00002604   0x00000030   Code   RO          544    .text.IsFault       rtx_kernel.o
+    0x00002634   0x0000002e   Code   RO          524    .text.IsIrqMasked   rtx_kernel.o
+    0x00002662   0x00000002   PAD
+    0x00002664   0x0000002e   Code   RO          765    .text.IsIrqMasked   rtx_msgqueue.o
+    0x00002692   0x00000002   PAD
+    0x00002694   0x0000002e   Code   RO          846    .text.IsIrqMasked   rtx_mutex.o
+    0x000026c2   0x00000002   PAD
+    0x000026c4   0x0000002e   Code   RO         1049    .text.IsIrqMasked   rtx_thread.o
+    0x000026f2   0x00000002   PAD
+    0x000026f4   0x00000022   Code   RO          799    .text.IsMessageQueuePtrValid  rtx_msgqueue.o
+    0x00002716   0x00000002   PAD
+    0x00002718   0x00000022   Code   RO          862    .text.IsMutexPtrValid  rtx_mutex.o
+    0x0000273a   0x00000002   PAD
+    0x0000273c   0x00000016   Code   RO          548    .text.IsPendSvIrq   rtx_kernel.o
+    0x00002752   0x00000002   PAD
+    0x00002754   0x00000014   Code   RO          528    .text.IsPrivileged  rtx_kernel.o
+    0x00002768   0x00000016   Code   RO          546    .text.IsSVCallIrq   rtx_kernel.o
+    0x0000277e   0x00000002   PAD
+    0x00002780   0x00000022   Code   RO         1133    .text.IsThreadPtrValid  rtx_thread.o
+    0x000027a2   0x00000002   PAD
+    0x000027a4   0x0000001c   Code   RO          550    .text.IsTickIrq     rtx_kernel.o
+    0x000027c0   0x00000018   Code   RO          665    .text.MemBlockPtr   rtx_memory.o
+    0x000027d8   0x0000000a   Code   RO          663    .text.MemHeadPtr    rtx_memory.o
+    0x000027e2   0x00000002   PAD
+    0x000027e4   0x00000052   Code   RO          815    .text.MessageQueueGet  rtx_msgqueue.o
+    0x00002836   0x00000002   PAD
+    0x00002838   0x000000ac   Code   RO          807    .text.MessageQueuePut  rtx_msgqueue.o
+    0x000028e4   0x00000042   Code   RO          803    .text.MessageQueueRemove  rtx_msgqueue.o
+    0x00002926   0x00000002   PAD
+    0x00002928   0x0000000c   Code   RO         1277    .text.OS_Tick_AcknowledgeIRQ  os_systick.o
+    0x00002934   0x00000010   Code   RO          968    .text.SetPendSV     rtx_system.o
+    0x00002944   0x00000034   Code   RO         1013    .text.SetPrivileged  rtx_thread.o
+    0x00002978   0x0000000c   Code   RO         1009    .text.StackOffsetR0  rtx_thread.o
+    0x00002984   0x00000112   Code   RO         2226    .text.SystemInit    system_LPC17xx.o
+    0x00002a96   0x00000002   PAD
+    0x00002a98   0x0000007c   Code   RO         1141    .text.ThreadFlagsCheck  rtx_thread.o
+    0x00002b14   0x0000009e   Code   RO         1244    .text.TimerInsert   rtx_timer.o
+    0x00002bb2   0x00000002   PAD
+    0x00002bb4   0x00000028   Code   RO         1240    .text.TimerUnlink   rtx_timer.o
+    0x00002bdc   0x00000096   Code   RO          623    .text.__user_perthread_libspace  rtx_lib.o
+    0x00002c72   0x00000002   PAD
+    0x00002c74   0x00000020   Code   RO          633    .text._mutex_acquire  rtx_lib.o
+    0x00002c94   0x00000012   Code   RO          637    .text._mutex_free   rtx_lib.o
+    0x00002ca6   0x00000002   PAD
+    0x00002ca8   0x00000032   Code   RO          631    .text._mutex_initialize  rtx_lib.o
+    0x00002cda   0x00000002   PAD
+    0x00002cdc   0x0000001c   Code   RO          635    .text._mutex_release  rtx_lib.o
+    0x00002cf8   0x00000008   Code   RO          621    .text._platform_post_stackheap_init  rtx_lib.o
+    0x00002d00   0x00000038   Code   RO         1143    .text.atomic_chk32_all  rtx_thread.o
+    0x00002d38   0x00000034   Code   RO         1145    .text.atomic_chk32_any  rtx_thread.o
+    0x00002d6c   0x0000002c   Code   RO          970    .text.atomic_dec16_nz  rtx_system.o
+    0x00002d98   0x00000020   Code   RO          690    .text.atomic_dec32  rtx_mempool.o
+    0x00002db8   0x00000028   Code   RO          817    .text.atomic_dec32_nz  rtx_msgqueue.o
+    0x00002de0   0x00000034   Code   RO          972    .text.atomic_inc16_lim  rtx_system.o
+    0x00002e14   0x00000038   Code   RO          976    .text.atomic_inc16_lt  rtx_system.o
+    0x00002e4c   0x00000020   Code   RO          684    .text.atomic_inc32  rtx_mempool.o
+    0x00002e6c   0x00000020   Code   RO          809    .text.atomic_inc32  rtx_msgqueue.o
+    0x00002e8c   0x00000028   Code   RO          682    .text.atomic_link_get  rtx_mempool.o
+    0x00002eb4   0x00000030   Code   RO          688    .text.atomic_link_put  rtx_mempool.o
+    0x00002ee4   0x00000028   Code   RO          819    .text.atomic_wr8    rtx_msgqueue.o
+    0x00002f0c   0x0000005c   Code   RO         1697    .text.do_memp_free_pool  memp.o
+    0x00002f68   0x0000007e   Code   RO         1691    .text.do_memp_malloc_pool  memp.o
+    0x00002fe6   0x00000002   PAD
+    0x00002fe8   0x0000005e   Code   RO         1537    .text.etharp_free_entry  etharp.o
+    0x00003046   0x00000002   PAD
+    0x00003048   0x0000017a   Code   RO         1553    .text.etharp_raw    etharp.o
+    0x000031c2   0x00000002   PAD
+    0x000031c4   0x0000001c   Code   RO         1539    .text.etharp_request  etharp.o
+    0x000031e0   0x0000003c   Code   RO         1561    .text.etharp_request_dst  etharp.o
+    0x0000321c   0x00000150   Code   RO         1535    .text.etharp_tmr    etharp.o
+    0x0000336c   0x000000b2   Code   RO         2123    .text.ethernet_output  ethernet.o
+    0x0000341e   0x00000002   PAD
+    0x00003420   0x0000001e   Code   RO         1507    .text.inet_chksum   inet_chksum.o
+    0x0000343e   0x00000002   PAD
+    0x00003440   0x0000006c   Code   RO         1495    .text.inet_chksum_pseudo  inet_chksum.o
+    0x000034ac   0x000000b6   Code   RO         1497    .text.inet_cksum_pseudo_base  inet_chksum.o
+    0x00003562   0x00000002   PAD
+    0x00003564   0x0000002a   Code   RO         2236    .text.init          main.o
+    0x0000358e   0x00000002   PAD
+    0x00003590   0x0000030e   Code   RO         1636    .text.ip4_frag      ip4_frag.o
+    0x0000389e   0x00000002   PAD
+    0x000038a0   0x0000006e   Code   RO         1580    .text.ip4_output_if  ip4.o
+    0x0000390e   0x00000002   PAD
+    0x00003910   0x00000222   Code   RO         1582    .text.ip4_output_if_src  ip4.o
+    0x00003b32   0x00000002   PAD
+    0x00003b34   0x00000088   Code   RO         1574    .text.ip4_route     ip4.o
+    0x00003bbc   0x00000032   Code   RO         1499    .text.ip_chksum_pseudo  inet_chksum.o
+    0x00003bee   0x00000002   PAD
+    0x00003bf0   0x0000000a   Code   RO         1638    .text.ip_frag_alloc_pbuf_custom_ref  ip4_frag.o
+    0x00003bfa   0x00000002   PAD
+    0x00003bfc   0x00000048   Code   RO         1640    .text.ip_frag_free_pbuf_custom_ref  ip4_frag.o
+    0x00003c44   0x00000076   Code   RO         1634    .text.ip_reass_dequeue_datagram  ip4_frag.o
+    0x00003cba   0x00000002   PAD
+    0x00003cbc   0x0000016a   Code   RO         1624    .text.ip_reass_free_complete_datagram  ip4_frag.o
+    0x00003e26   0x00000002   PAD
+    0x00003e28   0x00000054   Code   RO         1622    .text.ip_reass_tmr  ip4_frag.o
+    0x00003e7c   0x00000096   Code   RO         1642    .text.ipfrag_free_pbuf_custom  ip4_frag.o
+    0x00003f12   0x00000002   PAD
+    0x00003f14   0x000000ac   Code   RO          777    .text.isrRtxMessageQueueGet  rtx_msgqueue.o
+    0x00003fc0   0x000000bc   Code   RO          773    .text.isrRtxMessageQueuePut  rtx_msgqueue.o
+    0x0000407c   0x00000054   Code   RO          952    .text.isr_queue_get  rtx_system.o
+    0x000040d0   0x0000005e   Code   RO          966    .text.isr_queue_put  rtx_system.o
+    0x0000412e   0x00000002   PAD
+    0x00004130   0x00000070   Code   RO         2095    .text.lwip_cyclic_timer  timeouts.o
+    0x000041a0   0x00000020   Code   RO         1475    .text.lwip_htonl    def.o
+    0x000041c0   0x00000010   Code   RO         1473    .text.lwip_htons    def.o
+    0x000041d0   0x0000002c   Code   RO         1519    .text.lwip_init     init.o
+    0x000041fc   0x000000a8   Code   RO         1493    .text.lwip_standard_chksum  inet_chksum.o
+    0x000042a4   0x00000014   Code   RO         2238    .text.main          main.o
+    0x000042b8   0x00000158   Code   RO         1658    .text.mem_free      mem.o
+    0x00004410   0x000000ae   Code   RO         1654    .text.mem_init      mem.o
+    0x000044be   0x00000002   PAD
+    0x000044c0   0x0000008a   Code   RO         1660    .text.mem_link_valid  mem.o
+    0x0000454a   0x00000002   PAD
+    0x0000454c   0x00000330   Code   RO         1668    .text.mem_malloc    mem.o
+    0x0000487c   0x00000018   Code   RO         1666    .text.mem_to_ptr    mem.o
+    0x00004894   0x00000326   Code   RO         1664    .text.mem_trim      mem.o
+    0x00004bba   0x00000002   PAD
+    0x00004bbc   0x00000038   Code   RO         1699    .text.memp_free     memp.o
+    0x00004bf4   0x0000003c   Code   RO         1687    .text.memp_init     memp.o
+    0x00004c30   0x00000008   Code   RO         1685    .text.memp_init_pool  memp.o
+    0x00004c38   0x00000038   Code   RO         1693    .text.memp_malloc   memp.o
+    0x00004c70   0x0000004c   Code   RO         2174    .text.ms2tick       sys_arch.o
+    0x00004cbc   0x00000048   Code   RO         1770    .text.netif_get_by_index  netif.o
+    0x00004d04   0x00000002   Code   RO         1720    .text.netif_init    netif.o
+    0x00004d06   0x00000002   PAD
+    0x00004d08   0x00000042   Code   RO          532    .text.osKernelGetState  rtx_kernel.o
+    0x00004d4a   0x00000002   PAD
+    0x00004d4c   0x0000003a   Code   RO          564    .text.osKernelGetTickCount  rtx_kernel.o
+    0x00004d86   0x00000002   PAD
+    0x00004d88   0x0000003a   Code   RO          568    .text.osKernelGetTickFreq  rtx_kernel.o
+    0x00004dc2   0x00000002   PAD
+    0x00004dc4   0x0000004a   Code   RO          520    .text.osKernelInitialize  rtx_kernel.o
+    0x00004e0e   0x00000002   PAD
+    0x00004e10   0x00000046   Code   RO          538    .text.osKernelLock  rtx_kernel.o
+    0x00004e56   0x00000002   PAD
+    0x00004e58   0x0000008a   Code   RO          542    .text.osKernelRestoreLock  rtx_kernel.o
+    0x00004ee2   0x00000002   PAD
+    0x00004ee4   0x0000007e   Code   RO          775    .text.osMessageQueueGet  rtx_msgqueue.o
+    0x00004f62   0x00000002   PAD
+    0x00004f64   0x00000072   Code   RO          761    .text.osMessageQueueNew  rtx_msgqueue.o
+    0x00004fd6   0x00000002   PAD
+    0x00004fd8   0x0000008a   Code   RO          771    .text.osMessageQueuePut  rtx_msgqueue.o
+    0x00005062   0x00000002   PAD
+    0x00005064   0x00000064   Code   RO          852    .text.osMutexAcquire  rtx_mutex.o
+    0x000050c8   0x00000056   Code   RO          858    .text.osMutexDelete  rtx_mutex.o
+    0x0000511e   0x00000002   PAD
+    0x00005120   0x00000056   Code   RO          842    .text.osMutexNew    rtx_mutex.o
+    0x00005176   0x00000002   PAD
+    0x00005178   0x00000056   Code   RO          854    .text.osMutexRelease  rtx_mutex.o
+    0x000051ce   0x00000002   PAD
+    0x000051d0   0x00000030   Code   RO         2215    .text.osRtxErrorNotify  RTX_Config.o
+    0x00005200   0x0000000a   Code   RO          956    .text.osRtxEventFlagsObject  rtx_system.o
+    0x0000520a   0x00000002   PAD
+    0x0000520c   0x00000002   Code   RO          516    .text.osRtxKernelBeforeInit  rtx_kernel.o
+    0x0000520e   0x00000002   PAD
+    0x00005210   0x0000001c   Code   RO          518    .text.osRtxKernelErrorNotify  rtx_kernel.o
+    0x0000522c   0x0000000c   Code   RO          948    .text.osRtxKernelGetState  rtx_system.o
+    0x00005238   0x0000000c   Code   RO         1017    .text.osRtxKernelGetState  rtx_thread.o
+    0x00005244   0x0000000c   Code   RO          582    .text.osRtxKernelState  rtx_kernel.o
+    0x00005250   0x0000014c   Code   RO          667    .text.osRtxMemoryAlloc  rtx_memory.o
+    0x0000539c   0x000000c2   Code   RO          669    .text.osRtxMemoryFree  rtx_memory.o
+    0x0000545e   0x00000002   PAD
+    0x00005460   0x00000096   Code   RO          661    .text.osRtxMemoryInit  rtx_memory.o
+    0x000054f6   0x00000002   PAD
+    0x000054f8   0x0000004a   Code   RO          680    .text.osRtxMemoryPoolAlloc  rtx_mempool.o
+    0x00005542   0x00000002   PAD
+    0x00005544   0x00000064   Code   RO          686    .text.osRtxMemoryPoolFree  rtx_mempool.o
+    0x000055a8   0x00000098   Code   RO          678    .text.osRtxMemoryPoolInit  rtx_mempool.o
+    0x00005640   0x0000000a   Code   RO          960    .text.osRtxMemoryPoolObject  rtx_system.o
+    0x0000564a   0x00000002   PAD
+    0x0000564c   0x0000000a   Code   RO          962    .text.osRtxMessageObject  rtx_system.o
+    0x00005656   0x00000002   PAD
+    0x00005658   0x0000000a   Code   RO          757    .text.osRtxMessageQueueId  rtx_msgqueue.o
+    0x00005662   0x00000002   PAD
+    0x00005664   0x00000144   Code   RO          801    .text.osRtxMessageQueuePostProcess  rtx_msgqueue.o
+    0x000057a8   0x0000003e   Code   RO          755    .text.osRtxMessageQueueTimerSetup  rtx_msgqueue.o
+    0x000057e6   0x00000002   PAD
+    0x000057e8   0x0000005a   Code   RO          878    .text.osRtxMutexDestroy  rtx_mutex.o
+    0x00005842   0x00000002   PAD
+    0x00005844   0x0000000a   Code   RO          864    .text.osRtxMutexId  rtx_mutex.o
+    0x0000584e   0x00000002   PAD
+    0x00005850   0x0000000a   Code   RO         1005    .text.osRtxMutexObject  rtx_thread.o
+    0x0000585a   0x00000002   PAD
+    0x0000585c   0x00000098   Code   RO          836    .text.osRtxMutexOwnerRelease  rtx_mutex.o
+    0x000058f4   0x000000ac   Code   RO          840    .text.osRtxMutexOwnerRestore  rtx_mutex.o
+    0x000059a0   0x000000fc   Code   RO          876    .text.osRtxMutexOwnerUnlock  rtx_mutex.o
+    0x00005a9c   0x0000000a   Code   RO          805    .text.osRtxObject   rtx_msgqueue.o
+    0x00005aa6   0x00000002   PAD
+    0x00005aa8   0x0000000a   Code   RO          838    .text.osRtxObject   rtx_mutex.o
+    0x00005ab2   0x00000002   PAD
+    0x00005ab4   0x0000000a   Code   RO          974    .text.osRtxObject   rtx_system.o
+    0x00005abe   0x00000002   PAD
+    0x00005ac0   0x0000000a   Code   RO          993    .text.osRtxObject   rtx_thread.o
+    0x00005aca   0x00000002   PAD
+    0x00005acc   0x000000b8   Code   RO          950    .text.osRtxPendSV_Handler  rtx_system.o
+    0x00005b84   0x00000042   Code   RO          964    .text.osRtxPostProcess  rtx_system.o
+    0x00005bc6   0x00000002   PAD
+    0x00005bc8   0x0000000a   Code   RO          958    .text.osRtxSemaphoreObject  rtx_system.o
+    0x00005bd2   0x00000002   PAD
+    0x00005bd4   0x00000010   Code   RO          627    .text.osRtxThreadBeforeFree  rtx_lib.o
+    0x00005be4   0x00000088   Code   RO         1021    .text.osRtxThreadBlock  rtx_thread.o
+    0x00005c6c   0x000000fa   Code   RO         1027    .text.osRtxThreadDelayInsert  rtx_thread.o
+    0x00005d66   0x00000002   PAD
+    0x00005d68   0x0000009c   Code   RO          999    .text.osRtxThreadDelayRemove  rtx_thread.o
+    0x00005e04   0x00000150   Code   RO         1001    .text.osRtxThreadDelayTick  rtx_thread.o
+    0x00005f54   0x00000060   Code   RO         1033    .text.osRtxThreadDestroy  rtx_thread.o
+    0x00005fb4   0x00000096   Code   RO         1015    .text.osRtxThreadDispatch  rtx_thread.o
+    0x0000604a   0x00000002   PAD
+    0x0000604c   0x000000a2   Code   RO         1035    .text.osRtxThreadFree  rtx_thread.o
+    0x000060ee   0x00000002   PAD
+    0x000060f0   0x0000000c   Code   RO          813    .text.osRtxThreadGetRunning  rtx_msgqueue.o
+    0x000060fc   0x0000000c   Code   RO          868    .text.osRtxThreadGetRunning  rtx_mutex.o
+    0x00006108   0x0000000c   Code   RO         1019    .text.osRtxThreadGetRunning  rtx_thread.o
+    0x00006114   0x0000000c   Code   RO         1238    .text.osRtxThreadGetRunning  rtx_timer.o
+    0x00006120   0x0000003c   Code   RO         1031    .text.osRtxThreadJoinWakeup  rtx_thread.o
+    0x0000615c   0x00000036   Code   RO          989    .text.osRtxThreadListGet  rtx_thread.o
+    0x00006192   0x00000002   PAD
+    0x00006194   0x00000076   Code   RO          985    .text.osRtxThreadListPut  rtx_thread.o
+    0x0000620a   0x00000002   PAD
+    0x0000620c   0x00000032   Code   RO          995    .text.osRtxThreadListRemove  rtx_thread.o
+    0x0000623e   0x00000002   PAD
+    0x00006240   0x00000022   Code   RO         1003    .text.osRtxThreadListRoot  rtx_thread.o
+    0x00006262   0x00000002   PAD
+    0x00006264   0x00000058   Code   RO          991    .text.osRtxThreadListSort  rtx_thread.o
+    0x000062bc   0x0000000a   Code   RO          954    .text.osRtxThreadObject  rtx_system.o
+    0x000062c6   0x00000002   PAD
+    0x000062c8   0x0000000a   Code   RO          987    .text.osRtxThreadObject  rtx_thread.o
+    0x000062d2   0x00000002   PAD
+    0x000062d4   0x00000044   Code   RO         1139    .text.osRtxThreadPostProcess  rtx_thread.o
+    0x00006318   0x00000020   Code   RO          997    .text.osRtxThreadReadyPut  rtx_thread.o
+    0x00006338   0x00000022   Code   RO         1007    .text.osRtxThreadRegPtr  rtx_thread.o
+    0x0000635a   0x00000002   PAD
+    0x0000635c   0x00000014   Code   RO         1175    .text.osRtxThreadSetRunning  rtx_thread.o
+    0x00006370   0x00000014   Code   RO         1242    .text.osRtxThreadSetRunning  rtx_timer.o
+    0x00006384   0x0000003c   Code   RO         1029    .text.osRtxThreadStackCheck  rtx_thread.o
+    0x000063c0   0x0000002e   Code   RO         1011    .text.osRtxThreadSwitch  rtx_thread.o
+    0x000063ee   0x00000002   PAD
+    0x000063f0   0x00000076   Code   RO         1025    .text.osRtxThreadWaitEnter  rtx_thread.o
+    0x00006466   0x00000002   PAD
+    0x00006468   0x00000046   Code   RO         1023    .text.osRtxThreadWaitExit  rtx_thread.o
+    0x000064ae   0x00000002   PAD
+    0x000064b0   0x00000110   Code   RO          946    .text.osRtxTick_Handler  rtx_system.o
+    0x000065c0   0x00000030   Code   RO         1214    .text.osRtxTimerSetup  rtx_timer.o
+    0x000065f0   0x00000032   Code   RO         1218    .text.osRtxTimerThread  rtx_timer.o
+    0x00006622   0x00000002   PAD
+    0x00006624   0x000000dc   Code   RO         1216    .text.osRtxTimerTick  rtx_timer.o
+    0x00006700   0x00000010   Code   RO         1135    .text.osThreadEntry  rtx_thread.o
+    0x00006710   0x00000024   Code   RO         1087    .text.osThreadExit  rtx_thread.o
+    0x00006734   0x0000003a   Code   RO         1063    .text.osThreadGetId  rtx_thread.o
+    0x0000676e   0x00000002   PAD
+    0x00006770   0x00000072   Code   RO         1045    .text.osThreadNew   rtx_thread.o
+    0x000067e2   0x00000002   PAD
+    0x000067e4   0x00000036   Code   RO          625    .text.os_kernel_is_active  rtx_lib.o
+    0x0000681a   0x00000002   PAD
+    0x0000681c   0x00000016   Code   RO         1794    .text.pbuf_add_header  pbuf.o
+    0x00006832   0x00000002   PAD
+    0x00006834   0x00000108   Code   RO         1796    .text.pbuf_add_header_impl  pbuf.o
+    0x0000693c   0x000002a0   Code   RO         1782    .text.pbuf_alloc    pbuf.o
+    0x00006bdc   0x0000008a   Code   RO         1784    .text.pbuf_alloc_reference  pbuf.o
+    0x00006c66   0x00000002   PAD
+    0x00006c68   0x0000008a   Code   RO         1790    .text.pbuf_alloced_custom  pbuf.o
+    0x00006cf2   0x00000002   PAD
+    0x00006cf4   0x000000ca   Code   RO         1814    .text.pbuf_cat      pbuf.o
+    0x00006dbe   0x00000002   PAD
+    0x00006dc0   0x0000002c   Code   RO         1810    .text.pbuf_clen     pbuf.o
+    0x00006dec   0x0000011a   Code   RO         1824    .text.pbuf_copy_partial  pbuf.o
+    0x00006f06   0x00000002   PAD
+    0x00006f08   0x000001b2   Code   RO         1786    .text.pbuf_free     pbuf.o
+    0x000070ba   0x00000002   PAD
+    0x000070bc   0x00000056   Code   RO         1788    .text.pbuf_init_alloced_pbuf  pbuf.o
+    0x00007112   0x00000002   PAD
+    0x00007114   0x0000016e   Code   RO         1792    .text.pbuf_realloc  pbuf.o
+    0x00007282   0x00000002   PAD
+    0x00007284   0x00000064   Code   RO         1812    .text.pbuf_ref      pbuf.o
+    0x000072e8   0x000001e8   Code   RO         1662    .text.plug_holes    mem.o
+    0x000074d0   0x0000001a   Code   RO         1656    .text.ptr_to_mem    mem.o
+    0x000074ea   0x00000002   PAD
+    0x000074ec   0x00000016   Code   RO          534    .text.svcRtxKernelGetState  rtx_kernel.o
+    0x00007502   0x00000002   PAD
+    0x00007504   0x0000001c   Code   RO          566    .text.svcRtxKernelGetTickCount  rtx_kernel.o
+    0x00007520   0x0000001c   Code   RO          570    .text.svcRtxKernelGetTickFreq  rtx_kernel.o
+    0x0000753c   0x00000304   Code   RO          580    .text.svcRtxKernelInitialize  rtx_kernel.o
+    0x00007840   0x0000005e   Code   RO          590    .text.svcRtxKernelLock  rtx_kernel.o
+    0x0000789e   0x00000002   PAD
+    0x000078a0   0x00000084   Code   RO          552    .text.svcRtxKernelRestoreLock  rtx_kernel.o
+    0x00007924   0x00000168   Code   RO          821    .text.svcRtxMessageQueueGet  rtx_msgqueue.o
+    0x00007a8c   0x00000290   Code   RO          759    .text.svcRtxMessageQueueNew  rtx_msgqueue.o
+    0x00007d1c   0x0000015c   Code   RO          811    .text.svcRtxMessageQueuePut  rtx_msgqueue.o
+    0x00007e78   0x00000176   Code   RO          866    .text.svcRtxMutexAcquire  rtx_mutex.o
+    0x00007fee   0x00000002   PAD
+    0x00007ff0   0x00000058   Code   RO          874    .text.svcRtxMutexDelete  rtx_mutex.o
+    0x00008048   0x00000142   Code   RO          860    .text.svcRtxMutexNew  rtx_mutex.o
+    0x0000818a   0x00000002   PAD
+    0x0000818c   0x000001a0   Code   RO          870    .text.svcRtxMutexRelease  rtx_mutex.o
+    0x0000832c   0x00000084   Code   RO         1173    .text.svcRtxThreadExit  rtx_thread.o
+    0x000083b0   0x00000016   Code   RO         1065    .text.svcRtxThreadGetId  rtx_thread.o
+    0x000083c6   0x00000002   PAD
+    0x000083c8   0x0000046a   Code   RO         1043    .text.svcRtxThreadNew  rtx_thread.o
+    0x00008832   0x00000002   PAD
+    0x00008834   0x00000042   Code   RO         2186    .text.sys_arch_mbox_fetch  sys_arch.o
+    0x00008876   0x00000002   PAD
+    0x00008878   0x00000010   Code   RO         2198    .text.sys_arch_protect  sys_arch.o
+    0x00008888   0x00000010   Code   RO         2200    .text.sys_arch_unprotect  sys_arch.o
+    0x00008898   0x0000008a   Code   RO         2101    .text.sys_check_timeouts  timeouts.o
+    0x00008922   0x00000002   PAD
+    0x00008924   0x00000042   Code   RO         2202    .text.sys_init      sys_arch.o
+    0x00008966   0x00000002   PAD
+    0x00008968   0x00000038   Code   RO         2178    .text.sys_mbox_new  sys_arch.o
+    0x000089a0   0x00000016   Code   RO         2164    .text.sys_mutex_lock  sys_arch.o
+    0x000089b6   0x00000002   PAD
+    0x000089b8   0x00000038   Code   RO         2160    .text.sys_mutex_new  sys_arch.o
+    0x000089f0   0x00000012   Code   RO         2166    .text.sys_mutex_unlock  sys_arch.o
+    0x00008a02   0x00000002   PAD
+    0x00008a04   0x0000000c   Code   RO         2192    .text.sys_now       sys_arch.o
+    0x00008a10   0x00000038   Code   RO         2190    .text.sys_thread_new  sys_arch.o
+    0x00008a48   0x0000005c   Code   RO         2089    .text.sys_timeout   timeouts.o
+    0x00008aa4   0x00000118   Code   RO         2097    .text.sys_timeout_abs  timeouts.o
+    0x00008bbc   0x0000003e   Code   RO         2093    .text.sys_timeouts_init  timeouts.o
+    0x00008bfa   0x00000002   PAD
+    0x00008bfc   0x000000a2   Code   RO         2105    .text.sys_timeouts_sleeptime  timeouts.o
+    0x00008c9e   0x00000002   PAD
+    0x00008ca0   0x00000086   Code   RO         2099    .text.sys_untimeout  timeouts.o
+    0x00008d26   0x00000002   PAD
+    0x00008d28   0x000000b6   Code   RO         1875    .text.tcp_backlog_accepted  tcp.o
+    0x00008dde   0x00000002   PAD
+    0x00008de0   0x00000048   Code   RO         1877    .text.tcp_close     tcp.o
+    0x00008e28   0x00000264   Code   RO         1879    .text.tcp_close_shutdown  tcp.o
+    0x0000908c   0x000000fe   Code   RO         1915    .text.tcp_close_shutdown_fin  tcp.o
+    0x0000918a   0x00000002   PAD
+    0x0000918c   0x0000017c   Code   RO         2037    .text.tcp_create_segment  tcp_out.o
+    0x00009308   0x000000ca   Code   RO         1911    .text.tcp_eff_send_mss_netif  tcp.o
+    0x000093d2   0x00000002   PAD
+    0x000093d4   0x0000029a   Code   RO         2043    .text.tcp_enqueue_flags  tcp_out.o
+    0x0000966e   0x00000002   PAD
+    0x00009670   0x000000e2   Code   RO         1869    .text.tcp_fasttmr   tcp.o
+    0x00009752   0x00000002   PAD
+    0x00009754   0x0000004a   Code   RO         1865    .text.tcp_free      tcp.o
+    0x0000979e   0x00000002   PAD
+    0x000097a0   0x0000004a   Code   RO         1963    .text.tcp_free_listen  tcp.o
+    0x000097ea   0x00000002   PAD
+    0x000097ec   0x00000018   Code   RO         1863    .text.tcp_init      tcp.o
+    0x00009804   0x0000009e   Code   RO         2075    .text.tcp_keepalive  tcp_out.o
+    0x000098a2   0x00000002   PAD
+    0x000098a4   0x000000a8   Code   RO         1961    .text.tcp_listen_closed  tcp.o
+    0x0000994c   0x00000496   Code   RO         2045    .text.tcp_output    tcp_out.o
+    0x00009de2   0x00000002   PAD
+    0x00009de4   0x00000096   Code   RO         2073    .text.tcp_output_alloc_header  tcp_out.o
+    0x00009e7a   0x00000002   PAD
+    0x00009e7c   0x000000fa   Code   RO         2067    .text.tcp_output_alloc_header_common  tcp_out.o
+    0x00009f76   0x00000002   PAD
+    0x00009f78   0x000000e6   Code   RO         2071    .text.tcp_output_control_segment  tcp_out.o
+    0x0000a05e   0x00000002   PAD
+    0x0000a060   0x000000b0   Code   RO         2069    .text.tcp_output_fill_options  tcp_out.o
+    0x0000a110   0x0000024e   Code   RO         2051    .text.tcp_output_segment  tcp_out.o
+    0x0000a35e   0x00000002   PAD
+    0x0000a360   0x0000005a   Code   RO         2055    .text.tcp_output_segment_busy  tcp_out.o
+    0x0000a3ba   0x00000002   PAD
+    0x0000a3bc   0x0000008e   Code   RO         1913    .text.tcp_pcb_purge  tcp.o
+    0x0000a44a   0x00000002   PAD
+    0x0000a44c   0x0000018c   Code   RO         1885    .text.tcp_pcb_remove  tcp.o
+    0x0000a5d8   0x000000fc   Code   RO         1917    .text.tcp_process_refused_data  tcp.o
+    0x0000a6d4   0x0000005e   Code   RO         1921    .text.tcp_recv_null  tcp.o
+    0x0000a732   0x00000002   PAD
+    0x0000a734   0x000000b8   Code   RO         1905    .text.tcp_recved    tcp.o
+    0x0000a7ec   0x0000006e   Code   RO         1965    .text.tcp_remove_listener  tcp.o
+    0x0000a85a   0x00000002   PAD
+    0x0000a85c   0x00000060   Code   RO         2057    .text.tcp_rexmit_rto_commit  tcp_out.o
+    0x0000a8bc   0x000000f0   Code   RO         2053    .text.tcp_rexmit_rto_prepare  tcp_out.o
+    0x0000a9ac   0x00000034   Code   RO         2049    .text.tcp_route     tcp_out.o
+    0x0000a9e0   0x00000100   Code   RO         2065    .text.tcp_rst       tcp_out.o
+    0x0000aae0   0x0000002c   Code   RO         1923    .text.tcp_seg_free  tcp.o
+    0x0000ab0c   0x00000024   Code   RO         1887    .text.tcp_segs_free  tcp.o
+    0x0000ab30   0x000000e8   Code   RO         2047    .text.tcp_send_empty_ack  tcp_out.o
+    0x0000ac18   0x000000b6   Code   RO         2041    .text.tcp_send_fin  tcp_out.o
+    0x0000acce   0x00000002   PAD
+    0x0000acd0   0x00000878   Code   RO         1871    .text.tcp_slowtmr   tcp.o
+    0x0000b548   0x0000033a   Code   RO         2039    .text.tcp_split_unsent_seg  tcp_out.o
+    0x0000b882   0x00000002   PAD
+    0x0000b884   0x00000022   Code   RO         1867    .text.tcp_tmr       tcp.o
+    0x0000b8a6   0x00000002   PAD
+    0x0000b8a8   0x00000012   Code   RO         1999    .text.tcp_trigger_input_pcb_close  tcp_in.o
+    0x0000b8ba   0x00000002   PAD
+    0x0000b8bc   0x000000fa   Code   RO         1903    .text.tcp_update_rcv_ann_wnd  tcp.o
+    0x0000b9b6   0x00000002   PAD
+    0x0000b9b8   0x0000016c   Code   RO         2077    .text.tcp_zero_window_probe  tcp_out.o
+    0x0000bb24   0x000000c4   Code   RO         1444    .text.tcpip_init    tcpip.o
+    0x0000bbe8   0x00000082   Code   RO         1446    .text.tcpip_thread  tcpip.o
+    0x0000bc6a   0x00000002   PAD
+    0x0000bc6c   0x000000b4   Code   RO         1456    .text.tcpip_thread_handle_msg  tcpip.o
+    0x0000bd20   0x0000007a   Code   RO         1454    .text.tcpip_timeouts_mbox_fetch  tcpip.o
+    0x0000bd9a   0x00000002   PAD
+    0x0000bd9c   0x00000032   Code   RO         2194    .text.tick2ms       sys_arch.o
+    0x0000bdce   0x00000002   PAD
+    0x0000bdd0   0x00000048   Code   RO          629    .text.user_perthread_libspace_free  rtx_lib.o
+    0x0000be18   0x00000012   Code   RO         1137    .text.xPSR_InitVal  rtx_thread.o
+    0x0000be2a   0x0000003e   Code   RO         2629    CL$$btod_d2e        c_wu.l(btod.o)
+    0x0000be68   0x00000046   Code   RO         2631    CL$$btod_d2e_denorm_low  c_wu.l(btod.o)
+    0x0000beae   0x00000060   Code   RO         2630    CL$$btod_d2e_norm_op1  c_wu.l(btod.o)
+    0x0000bf0e   0x00000002   PAD
+    0x0000bf10   0x00000338   Code   RO         2639    CL$$btod_div_common  c_wu.l(btod.o)
+    0x0000c248   0x000000dc   Code   RO         2636    CL$$btod_e2e        c_wu.l(btod.o)
+    0x0000c324   0x0000002a   Code   RO         2633    CL$$btod_ediv       c_wu.l(btod.o)
+    0x0000c34e   0x0000002a   Code   RO         2632    CL$$btod_emul       c_wu.l(btod.o)
+    0x0000c378   0x00000244   Code   RO         2638    CL$$btod_mult_common  c_wu.l(btod.o)
+    0x0000c5bc   0x00000028   Code   RO         2711    i.__ARM_fpclassify  m_ws.l(fpclassify.o)
+    0x0000c5e4   0x0000000e   Code   RO         2365    i._is_digit         c_wu.l(__printf_wp.o)
+    0x0000c5f2   0x0000001c   Code   RO         2534    i.fputc             c_wu.l(fputc.o)
+    0x0000c60e   0x00000002   PAD
+    0x0000c610   0x0000002c   Code   RO         2412    locale$$code        c_wu.l(lc_ctype_c.o)
+    0x0000c63c   0x0000002c   Code   RO         2666    locale$$code        c_wu.l(lc_numeric_c.o)
+    0x0000c668   0x00000004   Code   RO         2469    x$fpl$printf1       fz_ws.l(printf1.o)
+    0x0000c66c   0x00000004   Code   RO         2471    x$fpl$printf2       fz_ws.l(printf2.o)
+    0x0000c670   0x00000000   Code   RO         2710    x$fpl$usenofp       fz_ws.l(usenofp.o)
+    0x0000c670   0x00000008   Data   RO         2324    .constdata          c_wu.l(_printf_wctomb.o)
+    0x0000c678   0x00000028   Data   RO         2353    .constdata          c_wu.l(_printf_hex_int_ll_ptr.o)
+    0x0000c6a0   0x00000011   Data   RO         2373    .constdata          c_wu.l(__printf_flags_ss_wp.o)
+    0x0000c6b1   0x00000026   Data   RO         2520    .constdata          c_wu.l(_printf_fp_hex.o)
+    0x0000c6d7   0x00000004   Data   RO         2559    .constdata          c_wu.l(sys_io_names.o)
+    0x0000c6db   0x00000004   Data   RO         2560    .constdata          c_wu.l(sys_io_names.o)
+    0x0000c6df   0x00000004   Data   RO         2561    .constdata          c_wu.l(sys_io_names.o)
+    0x0000c6e3   0x00000001   PAD
+    0x0000c6e4   0x00000094   Data   RO         2627    .constdata          c_wu.l(bigflt0.o)
+    0x0000c778   0x00000070   Data   RO          643    .rodata             rtx_lib.o
+    0x0000c7e8   0x00000038   Data   RO          646    .rodata             rtx_lib.o
+    0x0000c820   0x00000006   Data   RO         2125    .rodata.ethbroadcast  ethernet.o
+    0x0000c826   0x00000006   Data   RO         2126    .rodata.ethzero     ethernet.o
+    0x0000c82c   0x00000004   Data   RO         1611    .rodata.ip_addr_any  ip4_addr.o
+    0x0000c830   0x00000018   Data   RO         2107    .rodata.lwip_cyclic_timers  timeouts.o
+    0x0000c848   0x00000002   Data   RO         1705    .rodata.memp_FRAG_PBUF  memp.o
+    0x0000c84a   0x00000002   Data   RO         1709    .rodata.memp_PBUF   memp.o
+    0x0000c84c   0x00000002   Data   RO         1710    .rodata.memp_PBUF_POOL  memp.o
+    0x0000c84e   0x00000002   Data   RO         1704    .rodata.memp_REASSDATA  memp.o
+    0x0000c850   0x00000002   Data   RO         1708    .rodata.memp_SYS_TIMEOUT  memp.o
+    0x0000c852   0x00000002   Data   RO         1706    .rodata.memp_TCPIP_MSG_API  memp.o
+    0x0000c854   0x00000002   Data   RO         1707    .rodata.memp_TCPIP_MSG_INPKT  memp.o
+    0x0000c856   0x00000002   Data   RO         1701    .rodata.memp_TCP_PCB  memp.o
+    0x0000c858   0x00000002   Data   RO         1702    .rodata.memp_TCP_PCB_LISTEN  memp.o
+    0x0000c85a   0x00000002   Data   RO         1703    .rodata.memp_TCP_SEG  memp.o
+    0x0000c85c   0x00000028   Data   RO         1711    .rodata.memp_pools  memp.o
+    0x0000c884   0x00000004   Data   RO          645    .rodata.osRtxUserSVC  rtx_lib.o
+    0x0000c888   0x00000024   Data   RO          640    .rodata.os_idle_thread_attr  rtx_lib.o
+    0x0000c8ac   0x00000018   Data   RO          642    .rodata.os_timer_mq_attr  rtx_lib.o
+    0x0000c8c4   0x00000024   Data   RO          641    .rodata.os_timer_thread_attr  rtx_lib.o
+    0x0000c8e8   0x0000000b   Data   RO          612    .rodata.str1.1      rtx_kernel.o
+    0x0000c8f3   0x000000f1   Data   RO         1459    .rodata.str1.1      tcpip.o
+    0x0000c9e4   0x0000024a   Data   RO         1564    .rodata.str1.1      etharp.o
+    0x0000cc2e   0x0000008a   Data   RO         1588    .rodata.str1.1      ip4.o
+    0x0000ccb8   0x000001db   Data   RO         1646    .rodata.str1.1      ip4_frag.o
+    0x0000ce93   0x00000252   Data   RO         1677    .rodata.str1.1      mem.o
+    0x0000d0e5   0x000000a2   Data   RO         1712    .rodata.str1.1      memp.o
+    0x0000d187   0x000002a9   Data   RO         1852    .rodata.str1.1      pbuf.o
+    0x0000d430   0x0000057f   Data   RO         1973    .rodata.str1.1      tcp.o
+    0x0000d9af   0x00000774   Data   RO         2079    .rodata.str1.1      tcp_out.o
+    0x0000e123   0x000000d6   Data   RO         2110    .rodata.str1.1      timeouts.o
+    0x0000e1f9   0x00000083   Data   RO         2127    .rodata.str1.1      ethernet.o
+    0x0000e27c   0x00000010   Data   RO         2204    .rodata.sys_mutex_new.attr  sys_arch.o
+    0x0000e28c   0x0000000d   Data   RO         1979    .rodata.tcp_backoff  tcp.o
+    0x0000e299   0x00000003   PAD
+    0x0000e29c   0x00000010   Data   RO         1971    .rodata.tcp_pcb_lists  tcp.o
+    0x0000e2ac   0x00000007   Data   RO         1978    .rodata.tcp_persist_backoff  tcp.o
+    0x0000e2b3   0x00000001   PAD
+    0x0000e2b4   0x00000020   Data   RO         2826    Region$$Table       anon$$obj.o
+    0x0000e2d4   0x00000110   Data   RO         2411    locale$$data        c_wu.l(lc_ctype_c.o)
+    0x0000e3e4   0x0000001c   Data   RO         2665    locale$$data        c_wu.l(lc_numeric_c.o)
+
+
+    Execution Region RW_NOINIT (Base: 0x10000000, Size: 0x00000000, Max: 0x00007200, ABSOLUTE, UNINIT)
+
+    **** No section assigned to this execution region ****
+
+
+    Execution Region RW_RAM0 (Base: 0x10000000, Size: 0x00006f88, Max: 0x00007200, ABSOLUTE)
+
+    Base Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x10000000   0x00000004   Data   RW         2404    .data               c_wu.l(streamlock.o)
+    0x10000004   0x00000004   Data   RW         2408    .data               c_wu.l(stdio_streams.o)
+    0x10000008   0x00000004   Data   RW         2409    .data               c_wu.l(stdio_streams.o)
+    0x1000000c   0x00000004   Data   RW         2410    .data               c_wu.l(stdio_streams.o)
+    0x10000010   0x000000a4   Data   RW          613    .data.os            rtx_kernel.o
+    0x100000b4   0x00000002   Data   RW         1972    .data.tcp_port      tcp.o
+    0x100000b6   0x00000002   PAD
+    0x100000b8   0x000000e4   Zero   RW         2263    .bss                c_wu.l(rand.o)
+    0x1000019c   0x00000054   Zero   RW         2405    .bss                c_wu.l(stdio_streams.o)
+    0x100001f0   0x00000054   Zero   RW         2406    .bss                c_wu.l(stdio_streams.o)
+    0x10000244   0x00000054   Zero   RW         2407    .bss                c_wu.l(stdio_streams.o)
+    0x10000298   0x00000060   Zero   RW         2482    .bss                c_wu.l(libspace.o)
+    0x100002f8   0x000000f0   Zero   RW         1563    .bss.arp_table      etharp.o
+    0x100003e8   0x00000004   Zero   RW         2112    .bss.current_timeout_due_time  timeouts.o
+    0x100003ec   0x00000010   Zero   RW         1353    .bss.emac_control   EMAC_LPC17xx.o
+    0x100003fc   0x00000002   Zero   RW         1589    .bss.ip_id          ip4.o
+    0x100003fe   0x00000002   Zero   RW         1645    .bss.ip_reass_pbufcount  ip4_frag.o
+    0x10000400   0x00000004   Zero   RW         1675    .bss.lfree          mem.o
+    0x10000404   0x00000004   Zero   RW         1460    .bss.lock_tcpip_core  tcpip.o
+    0x10000408   0x00000004   Zero   RW         1676    .bss.mem_mutex      mem.o
+    0x1000040c   0x00000004   Zero   RW         1773    .bss.netif_default  netif.o
+    0x10000410   0x00000004   Zero   RW         2111    .bss.next_timeout   timeouts.o
+    0x10000414   0x00000004   PAD
+    0x10000418   0x00000440   Zero   RW          639    .bss.os             rtx_lib.o
+    0x10000858   0x000001f0   Zero   RW          647    .bss.os.libspace    rtx_lib.o
+    0x10000a48   0x00000034   Zero   RW          651    .bss.os.msgqueue.cb  rtx_lib.o
+    0x10000a7c   0x00000050   Zero   RW          652    .bss.os.msgqueue.mem  rtx_lib.o
+    0x10000acc   0x000000a0   Zero   RW          648    .bss.os.thread.cb   rtx_lib.o
+    0x10000b6c   0x00000004   PAD
+    0x10000b70   0x00000100   Zero   RW          649    .bss.os.thread.idle.stack  rtx_lib.o
+    0x10000c70   0x00000100   Zero   RW          650    .bss.os.thread.timer.stack  rtx_lib.o
+    0x10000d70   0x00000001   Zero   RW          653    .bss.os_kernel_is_active.os_kernel_active  rtx_lib.o
+    0x10000d71   0x00000003   PAD
+    0x10000d74   0x00000004   Zero   RW         1673    .bss.ram            mem.o
+    0x10000d78   0x00000004   Zero   RW         1674    .bss.ram_end        mem.o
+    0x10000d7c   0x00000413   Zero   RW         1672    .bss.ram_heap       mem.o
+    0x1000118f   0x00000001   PAD
+    0x10001190   0x00000004   Zero   RW         1644    .bss.reassdatagrams  ip4_frag.o
+    0x10001194   0x00000001   Zero   RW         2020    .bss.recv_flags     tcp_in.o
+    0x10001195   0x00000003   PAD
+    0x10001198   0x00000004   Zero   RW         1969    .bss.tcp_active_pcbs  tcp.o
+    0x1000119c   0x00000001   Zero   RW         1975    .bss.tcp_active_pcbs_changed  tcp.o
+    0x1000119d   0x00000003   PAD
+    0x100011a0   0x00000004   Zero   RW         1968    .bss.tcp_bound_pcbs  tcp.o
+    0x100011a4   0x00000004   Zero   RW         2022    .bss.tcp_input_pcb  tcp_in.o
+    0x100011a8   0x00000004   Zero   RW         1967    .bss.tcp_listen_pcbs  tcp.o
+    0x100011ac   0x00000004   Zero   RW         1976    .bss.tcp_ticks      tcp.o
+    0x100011b0   0x00000001   Zero   RW         1974    .bss.tcp_timer      tcp.o
+    0x100011b1   0x00000001   Zero   RW         1977    .bss.tcp_timer_ctr  tcp.o
+    0x100011b2   0x00000002   PAD
+    0x100011b4   0x00000004   Zero   RW         1970    .bss.tcp_tw_pcbs    tcp.o
+    0x100011b8   0x00000004   Zero   RW         1461    .bss.tcpip_init_done  tcpip.o
+    0x100011bc   0x00000004   Zero   RW         1462    .bss.tcpip_init_done_arg  tcpip.o
+    0x100011c0   0x00000004   Zero   RW         1458    .bss.tcpip_mbox     tcpip.o
+    0x100011c4   0x00000004   Zero   RW         2205    .bss.tick_freq      sys_arch.o
+    0x100011c8   0x00000000   Zero   RW           11    HEAP                startup_LPC17xx.o
+    0x100011c8   0x00005dc0   Zero   RW           10    STACK               startup_LPC17xx.o
+
+
+    Execution Region ARM_LIB_HEAP (Base: 0x10006f88, Size: 0x00000c00, Max: 0x00000c00, ABSOLUTE)
+
+    Base Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x10006f88   0x00000c00   Zero   RW            1    ARM_LIB_HEAP.bss    anon$$obj.o
+
+
+    Execution Region ARM_LIB_STACK (Base: 0x10007e00, Size: 0x00000200, Max: 0x00000200, ABSOLUTE)
+
+    Base Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x10007e00   0x00000200   Zero   RW            2    ARM_LIB_STACK.bss   anon$$obj.o
+
+
+    Execution Region RW_RAM1 (Base: 0x2007c000, Size: 0x00000000, Max: 0x00008000, ABSOLUTE)
+
+    **** No section assigned to this execution region ****
+
